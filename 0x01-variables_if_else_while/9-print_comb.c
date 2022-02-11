@@ -9,8 +9,7 @@
  */
 int main(void)
 {
-	int i;
-	char esp [] = " ,";
+	int i;	
 
 	for (i = 0; i <= 9; i++)
 	{
