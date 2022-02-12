@@ -2,7 +2,7 @@
 
 /**
  * main - Write a program that prints all possible
- * combinations of singe-digit numbers
+ * combinations of two digits
  *
  * Return: Always 0.
  *
