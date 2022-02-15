@@ -21,7 +21,7 @@ void times_table(void)
 				}
 				else
 					_putchar(result + '0');
-				if (result == 81)
+				if (j == 9)
 					break;
 				_putchar(44);
 				_putchar(32);
