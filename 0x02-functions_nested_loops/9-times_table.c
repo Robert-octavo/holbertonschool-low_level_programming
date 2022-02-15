@@ -11,7 +11,7 @@ void times_table(void)
 
 		for (i = 0; i <= 9; i++)
 		{
-			putchar(48);
+			_putchar(48);
 
 			for (j = 1; j <= 9; j++)
 			{
@@ -28,8 +28,6 @@ void times_table(void)
 					_putchar(32)
 					_putchar(result + '0');
 				}
-				if (j == 9)
-					break;
 			}
 			_putchar(10);
 		}
