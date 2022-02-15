@@ -5,6 +5,7 @@
  * print_to_98 print all natural numbers from
  * n to 98
  * @n: integer
+ *
  */
 void print_to_98(int n)
 {
@@ -21,6 +22,7 @@ void print_to_98(int n)
 				break;
 			printf(", ");
 		}
+		printf("\n");
 	}
 	else if (n > 98)
 	{
@@ -31,6 +33,7 @@ void print_to_98(int n)
 				break;
 			printf(", ");
 		}
+		printf("\n");
 	}
 	else
 	{
@@ -41,5 +44,6 @@ void print_to_98(int n)
 				break;
 			printf(", ");
 		}
+		printf("\n");
 	}
 }
