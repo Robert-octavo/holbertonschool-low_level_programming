@@ -5,7 +5,7 @@
  * @c: integer
  * Return: 1 if character is lowercase or uppercase
  * return: 0 otherwise
- * 
+ *
  */
 int _isalpha(int c)
 {
