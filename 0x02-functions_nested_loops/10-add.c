@@ -1,9 +1,10 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * add - function that adds two integers and returns
  * the result
- *
+ * @i: integer
+ * @j: integer
  * Return: addition
  */
 int add(int i, int j)
@@ -12,5 +13,5 @@ int add(int i, int j)
 
 	result = i + j;
 
-	return(result);
+	return (result);
 }
