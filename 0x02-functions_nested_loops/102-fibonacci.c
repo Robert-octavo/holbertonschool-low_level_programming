@@ -29,6 +29,7 @@ int main(void)
 		t2 = next;
 		next = t1 + t2;
 	}
+	printf("\n");
 
 	return (0);
 }
