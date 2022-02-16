@@ -17,7 +17,11 @@ int main(void)
 
 	for (i = 3; i <= 50; i++)
 	{
-		printf("%lu, ", next);
+		printf("%lu", next);
+
+		if (i == 50)
+			break;
+		printf(", ");
 		t1 = t2;
 		t2 = next;
 		next = t1 + t2;
