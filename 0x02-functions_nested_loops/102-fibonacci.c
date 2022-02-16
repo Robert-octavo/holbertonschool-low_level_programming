@@ -7,17 +7,17 @@
  */
 int main(void)
 {
-	unsigned long i, t1, t2,next;
+	unsigned long i, t1, t2, next;
 
 	t1 = 1;
 	t2 = 2;
 	next = t1 + t2;
 
-	printf("%lu, %lu, ",t1, t2);
+	printf("%lu, %lu, ",t1 ,t2);
 
 	for (i = 3; i <= 50; i++)
 	{
-		printf("%lu, ",next);
+		printf("%lu, ", next);
 		t1 = t2;
 		t2 = next;
 		next = t1 + t2;
