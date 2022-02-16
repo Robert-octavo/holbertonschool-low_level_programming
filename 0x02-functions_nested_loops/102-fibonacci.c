@@ -22,7 +22,7 @@ int main(void)
 		if (i == 50)
 		{
 			printf(" ");
-			break
+			break;
 		}
 		printf(", ");
 		t1 = t2;
