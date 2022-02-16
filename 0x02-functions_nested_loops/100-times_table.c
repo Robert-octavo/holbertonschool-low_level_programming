@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print-times_table - function that prints the n times tables
+ * print_times_table - function that prints the n times tables
  * starting with 0
  * @cant : Integer
  */
@@ -9,7 +9,7 @@ void print_times_table(int cant)
 {
 	int i, j, result, p;
 
-	if (cant >= 0 && cant < 16 )
+	if (cant >= 0 && cant < 16)
 	{
 		for (i = 0; i <= cant; i++)
 		{
