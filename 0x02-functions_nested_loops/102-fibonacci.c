@@ -13,7 +13,7 @@ int main(void)
 	t2 = 2;
 	next = t1 + t2;
 
-	printf("%lu, %lu, ",t1 ,t2);
+	printf("%lu, %lu, ", t1, t2);
 
 	for (i = 3; i <= 50; i++)
 	{
