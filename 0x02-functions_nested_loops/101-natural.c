@@ -3,9 +3,9 @@
 /**
  * main - sum of all the number multiples of
  * 3 or 5 below1 1024
- * Return : 0
+ * Return - Always 0
  */
-int main (void)
+int main(void)
 {
 	int i, j;
 
