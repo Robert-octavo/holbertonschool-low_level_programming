@@ -20,7 +20,10 @@ int main(void)
 		printf("%lu", next);
 
 		if (i == 50)
-			break;
+		{
+			printf(" ");
+			break
+		}
 		printf(", ");
 		t1 = t2;
 		t2 = next;
