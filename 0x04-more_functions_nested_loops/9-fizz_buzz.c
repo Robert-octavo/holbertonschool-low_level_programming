@@ -18,9 +18,10 @@ for (i = 1; i < 100; i++)
 		printf("Fizz ");
 	else if (i % 5 == 0)
 		printf("Buzz ");
-	else if(i % 3 != 0 && i % 5 != 0)
+	else
 		printf("%d ", i);
 }
 printf("Buzz");
+printf('\n');
 return (0);
 }
