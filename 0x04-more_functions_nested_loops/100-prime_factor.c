@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-long long int n, div, ans, max;
+	unsigned long long n, div, ans, max;
 
 n = 612852475143;
 div = 2;
