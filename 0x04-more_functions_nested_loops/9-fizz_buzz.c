@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - the Fizz-Buzz test is an interview
- * question designed to help filter out 99.5
- * 
- * Return: Always 0
- */
+* main - the Fizz-Buzz test is an interview
+* question designed to help filter out 99.5
+* 
+* Return: Always 0
+*/
 int main(void)
 {
 	int i;
