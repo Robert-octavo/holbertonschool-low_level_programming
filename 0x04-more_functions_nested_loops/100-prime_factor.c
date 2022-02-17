@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-unsigned int n, div, ans, max;
+long long int n, div, ans, max;
 
 n = 612852475143;
 div = 2;
@@ -25,7 +25,7 @@ while (n != 0)
 
 		if (n == 1)
 		{
-			printf("%u\n", max);
+			printf("%lld\n", max);
 			ans = 1;
 			break;
 		}
