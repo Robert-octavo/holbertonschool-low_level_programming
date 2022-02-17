@@ -22,9 +22,10 @@ while (n != 0)
 	{
 		max = n;
 		n = n / div;
+
 		if (n == 1)
 		{
-			printf("%lu\n", max);
+			printf("%ld\n", max);
 			ans = 1;
 			break;
 		}
