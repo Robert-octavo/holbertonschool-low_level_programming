@@ -6,7 +6,7 @@
  * @c: integer
  * Return: 1 if is uppercase 
  */
-void _isupper(int c)
+int _isupper(int c)
 {
 	if (c > 64 && c < 91)
 		return (1);
