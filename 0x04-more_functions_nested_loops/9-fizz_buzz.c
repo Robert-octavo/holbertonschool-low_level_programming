@@ -22,6 +22,5 @@ for (i = 1; i < 100; i++)
 		printf("%d ", i);
 }
 printf("Buzz");
-printf("\n");
 return (0);
 }
