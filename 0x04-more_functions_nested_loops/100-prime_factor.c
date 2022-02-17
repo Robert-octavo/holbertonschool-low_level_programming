@@ -24,7 +24,7 @@ while (n != 0)
 		n = n / div;
 		if (n == 1)
 		{
-			printf("%d\n", max);
+			printf("%lu\n", max);
 			ans = 1;
 			break;
 		}
