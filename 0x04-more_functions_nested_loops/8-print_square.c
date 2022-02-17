@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_square - function that prints a square,
- * followed by a new line
- * @size: integer
- */
+* print_square - function that prints a square,
+* followed by a new line
+* @size: integer
+*/
 void print_square(int size)
 {
 	int i, j;
