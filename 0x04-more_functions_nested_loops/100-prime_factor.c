@@ -25,7 +25,7 @@ while (n != 0)
 
 		if (n == 1)
 		{
-			printf("%ld\n", max);
+			printf("%d\n", max);
 			ans = 1;
 			break;
 		}
