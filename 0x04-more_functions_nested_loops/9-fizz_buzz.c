@@ -3,8 +3,8 @@
 /**
 * main - the Fizz-Buzz test is an interview
 * question designed to help filter out 99.5
-* 
-* Return: Always 0
+*
+* Return: Always 0.
 */
 int main(void)
 {
@@ -21,5 +21,6 @@ int main(void)
 		else
 			printf("%d ",i);
 	}
+
 	return (0);
 }
