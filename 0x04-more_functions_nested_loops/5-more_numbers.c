@@ -21,6 +21,8 @@ void more_numbers(void)
 			_putchar(c % 10 + '0');
 			c++;
 		}
-	_putchar('\n');
+		if (i == 10)
+			break;
+		_putchar('\n');
 	}
 }
