@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
-* main - finds and prints the largets
-* prime factor of the number
-*
+* print_number - prints a number
+*whit putchar
 */
 void print_number(int n)
 {
