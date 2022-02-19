@@ -3,16 +3,15 @@
 /**
 * main - finds and prints the largets
 * prime factor of the number
-* 612852612852
+*
 * Return: Always 0.
 */
 int main(void)
 {
-	unsigned long n, div, ans, max;
+	unsigned long n, div, max;
 
 n = 612852475143;
 div = 2;
-ans = 0;
 
 while (n != 0)
 {
@@ -26,7 +25,6 @@ while (n != 0)
 		if (n == 1)
 		{
 			printf("%ld\n", max);
-			ans = 1;
 			break;
 		}
 	}
