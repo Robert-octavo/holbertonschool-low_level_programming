@@ -6,7 +6,7 @@
 * @n: pointer to an int
 * Return:
 */
-int _isupper(int *n)
+int reset_to_98(int *n)
 {
 	int *n = 98;
 
