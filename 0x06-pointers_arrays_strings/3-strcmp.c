@@ -5,7 +5,6 @@
 *
 * @s1: pointer to a char
 * @s2: pointer to a char
-* @n: integer
 *
 * Return: integer
 */
