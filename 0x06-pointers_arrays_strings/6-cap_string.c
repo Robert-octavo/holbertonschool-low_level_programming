@@ -13,10 +13,11 @@ char *cap_string(char *str)
 
 	i = 0;
 
-	if (*(str + i) >= 97 && *(str + i) <= 122)
-		*(str + i) = *(str + i) * 32;
 	while(*(str + i) != '\0')
 	{
+		while (!(*(str + i) >= 97 && *(str + i) <= 122))
+			i++;
+
 		if (*(str + i) - 1 == 32 ||
 			*(str + i) - 1 == 9 ||
 			*(str + i) - 1 == 10 ||
