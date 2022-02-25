@@ -15,10 +15,10 @@ char *leet(char *s)
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; n[j]; j++)
 		{
-			if (*(s + 1) == l[i])
-				*(s + 1) = n[i];
+			if (*(s + 1) == l[j])
+				*(s + 1) = n[j];
 		}
 	}
 
