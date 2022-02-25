@@ -3,7 +3,7 @@
 /**
 * string_toupper - function that changes
 * all lowecases letters of a string to uppercase
-* @str: pointer to a string 
+* @str: pointer to a string
 *
 * Return: pointer
 */
@@ -16,5 +16,5 @@ char *string_toupper(char *str)
 		if (*(str + i) >= 97 && *(str + i) <= 122)
 			*(str + i) = *(str + i) - 32;
 	}
-	return (*str);
+	return (str);
 }
