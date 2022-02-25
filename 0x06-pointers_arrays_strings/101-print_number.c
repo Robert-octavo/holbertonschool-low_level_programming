@@ -2,7 +2,8 @@
 
 /**
 * print_number - prints a number
-*whit putchar
+* whit putchar
+*@n: integer
 */
 void print_number(int n)
 {
