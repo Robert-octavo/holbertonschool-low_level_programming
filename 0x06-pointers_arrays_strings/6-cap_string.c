@@ -11,9 +11,9 @@ char *cap_string(char *str)
 {
 	int i;
 
-	for (i = 0; *(str + i) != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		while (!(*(str + i) >= 97 && *(str + i) <= 122))
+		while (!(str[i] >= 97 && str[i] <= 122))
 			i++;
 
 		if (str[i - 1] == 32 || str[i - 1] == 9 ||
