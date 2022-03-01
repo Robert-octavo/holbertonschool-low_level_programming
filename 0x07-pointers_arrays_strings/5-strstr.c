@@ -29,6 +29,7 @@ char *_strstr(char *haystack, char *needle)
 
 			} while (*(haystack + i) == *(needle + i));
 		}
+		haystack++;
 	}
 	return ('\0');
 }
