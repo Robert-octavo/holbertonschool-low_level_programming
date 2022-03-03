@@ -12,14 +12,17 @@ int prime_n(int n, int i);
  */
 int prime_n(int n, int i)
 {
-	if (n > 1)
+	if (i < n)
 	{
 		if (n % i == 0)
 			return (0);
-		else
-			return (prime_n(n, i - 1));
+		
+		i = prime_n(n, i + 1);
 	}
-	return (1);
+
+	if (i != 0 && n % i == 0)
+		return (1);
+	return (0);
 }
 /**
 * is_prime_number - function that returns one
@@ -31,12 +34,8 @@ int prime_n(int n, int i)
 */
 int is_prime_number(int n)
 {
-	int i;
-
-	i = n - 1;
-
 	if (n < 0 || n == 1)
 		return (0);
 
-	return (prime_n(n, i));
+	return (prime_n(n, 2));
 }
