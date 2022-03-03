@@ -16,7 +16,6 @@ int prime_n(int n, int i)
 	{
 		if (n % i == 0)
 			return (0);
-		
 		i = prime_n(n, i + 1);
 	}
 
