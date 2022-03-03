@@ -1,22 +1,24 @@
 #include "main.h"
 
-int prime_n(int n, int c);
+int prime_n(int n, int i);
 
 /**
  * prime_n - return if the input number
  * is a prime
  * @n: integer
- * @c: integer
+ * @i: integer
  * Return: 1 is prime. 0 is not
  *
  */
-int prime_n(int n, int c)
+int prime_n(int n, int i)
 {
-	if (n % c == 0)
-		return (0);
-	else
-		return (prime_n(n, c - 1));
-
+	if (n > 1)
+	{
+		if (n % i == 0)
+			return (0);
+		else
+			return (prime_n(n, i - 1));
+	}
 	return (1);
 }
 /**
@@ -33,7 +35,7 @@ int is_prime_number(int n)
 
 	i = n - 1;
 
-	if (n <= 1)
+	if (n < 0 || n == 1)
 		return (0);
 
 	return (prime_n(n, i));
