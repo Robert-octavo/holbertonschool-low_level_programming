@@ -27,8 +27,8 @@ int palindromo(char *c, int indiceInicio, int indiceFin)
 	if (indiceInicio >= indiceFin)
 		return (1);
 
-	if(c[indiceInicio] == c[indiceFin])
-		return palindromo(c, indiceInicio + 1, indiceFin - 1);
+	if (c[indiceInicio] == c[indiceFin])
+		return (palindromo(c, indiceInicio + 1, indiceFin - 1));
 	else
 		return (0);
 }
@@ -44,5 +44,5 @@ int is_palindrome(char *s)
 {
 	if (*s == '\0')
 		return (1);
-	return(palindromo(s, 0, _strlen_recursion(s) - 1));
+	return (palindromo(s, 0, _strlen_recursion(s) - 1));
 }
