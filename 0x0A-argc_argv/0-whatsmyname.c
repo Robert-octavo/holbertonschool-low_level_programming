@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main - printrs its name
+* main - printrs the name of the program
 * @agrc: argument count
 * @argv: array of pointers
 *
@@ -9,6 +9,7 @@
 */
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", *argv);
+
 	return (0);
 }
