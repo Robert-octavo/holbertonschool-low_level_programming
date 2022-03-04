@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	suma = 0;
 	
-	for (i = 1; i <= argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
+
 		suma = suma + atoi(argv[i]);
 	}
 
