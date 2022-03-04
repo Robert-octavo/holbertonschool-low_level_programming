@@ -5,7 +5,7 @@
 * main - a program that adds positive numbers
 * @argc: argument count
 * @argv: array of arguments
-* Return: Multiplication or 1
+* Return: add
 */
 int main(int argc, char *argv[])
 {
@@ -13,9 +13,9 @@ int main(int argc, char *argv[])
 
 	suma = 0;
 	
-	for(i = 1; i <= argc; i++)
+	for (i = 1; i <= argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; i++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (!isdigit(argv[i][j]))
 			{
