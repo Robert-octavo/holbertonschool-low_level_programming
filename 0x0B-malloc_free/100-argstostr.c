@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* argstostr - concatenates all the arguments 
+* argstostr - concatenates all the arguments
 * @ac: integer
 * @av: double pointer
 * Return: a pointer
