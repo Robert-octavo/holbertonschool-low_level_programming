@@ -6,6 +6,7 @@
 * for an array, using malloc
 * @nmemb:unsigned integer
 * @size: unsigned integer
+* Return: pointer to the allocated memory
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
