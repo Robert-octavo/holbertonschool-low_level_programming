@@ -20,9 +20,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	lens1 = n;
-	while (*(s1 + lens1) != '\0')
-		lens1++;
+	i = 0;
 
+	while (*(s1 + i) != '\0')
+		lens1++;
 
 	ptr = malloc(sizeof(char) * (lens1 + 1));
 
