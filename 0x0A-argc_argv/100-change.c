@@ -6,7 +6,7 @@
 * coins to make change
 * @argc: argument count
 * @argv: array of arguments
-* Return: 0
+* Return: the amount of cents
 */
 int main(int argc, char *argv[])
 {
@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	i = 0;
 
-	if (argc == 1 || argv > 2)
+	if (argc <= 1)
 	{
 		printf("Error\n");
 		return (1);
