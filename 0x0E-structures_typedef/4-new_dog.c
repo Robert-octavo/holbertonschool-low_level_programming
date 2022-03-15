@@ -1,20 +1,20 @@
 #include <stdlib.h>
 #include "dog.h"
-int _length(char *str);
+int _lenght(char *star);
 
 /**
- * _length - finds the lenght of a string
+ * _lenght - finds the lenght of a string
  * @str: pointer
  * Return: integer lenght
  */
-int _length(char *str)
+int _lenght(char *str)
 {
-	int length = 0;
+	int lenght = 0;
 
 	if (!str || !*str)
 		return (0);
-	length = 1 + _length(length + 1);
-	return (length);
+	lenght = 1 + _lenght(lenght + 1);
+	return (lenght);
 }
 /**
  * new_dog - function that creates a new dog
@@ -32,18 +32,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog == NULL)
 		return (NULL);
 
-	dog->name = malloc(sizeof(char) * (_leght(name) + 1));
+	dog->name = malloc(sizeof(char) * (_lenght(name) + 1));
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 
-	for (i = 0; i <= _leght(name); i++)
+	for (i = 0; i <= _lenght(name); i++)
 		dog->name[i] = name[i];
 
 	dog->age = age;
-	dog->owner = malloc(sizeof(char) * (_leght(owner) + 1));
+	dog->owner = malloc(sizeof(char) * (_lenght(owner) + 1));
 	if (owner->owner == NULL)
 	{
 		free(dog->name);
