@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "dog.h"
-int _lenght(char *star);
+int _lenght(char *str);
 
 /**
  * _lenght - finds the lenght of a string
