@@ -1,60 +1,42 @@
-#include <stdlib.h>
 #include "dog.h"
-int _lenght(char *str);
-
+#include <stdlib.h>
 /**
- * _lenght - finds the lenght of a string
- * @str: pointer
- * Return: integer lenght
- */
-int _lenght(char *str)
-{
-	int lenght = 0;
-
-	if (!str || !*str)
-		return (0);
-	lenght = 1 + _lenght(lenght + 1);
-	return (lenght);
-}
-/**
- * new_dog - function that creates a new dog
- * @name: Pointer
- * @age: float
- * @owner: pointer
- * Return: Null if the function fails
- */
+ * new_dog - creates a new dog.
+ * @name: pointer to a char for name of dog
+ * @age: age of dog
+ * @owner: pointer to a char for owner of dog
+ * Return: pointer to a new dog of type dog_t
+ **/
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int nLen, oLen, i;
 	dog_t *dog;
-	int i len;
 
 	dog = (dog_t *)malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-	len = _lenght(name);
-
-	dog->name = malloc(sizeof(char) * (len + 1));
+	nLen = oLen = 0;
+	while (name[nLen++])
+		;
+	while (owner[oLen++])
+		;
+	dog->name = malloc(nLen * sizeof(dog->name));
 	if (dog->name == NULL)
 	{
-		free(dog);
+		free(d1);
 		return (NULL);
 	}
-
-	for (i = 0; i < len; i++)
+	for (i = 0; i <= nLen; i++)
 		dog->name[i] = name[i];
-
 	dog->age = age;
-	len = _lenght(owner);
-	dog->owner = malloc(sizeof(char) * (len + 1));
-	if (owner->owner == NULL)
+	dog->owner = malloc(oLen * sizeof(dog->owner));
+	if (dog->owner == NULL)
 	{
 		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
-	/*recorre y asigna a la structura dog.owner*/
-	for (i = 0; i < len; i++)
+	for (i = 0; i <= oLen; i++)
 		dog->owner[i] = owner[i];
-
 	return (dog);
 }
