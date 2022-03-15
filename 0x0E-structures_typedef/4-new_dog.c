@@ -39,7 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (i = 0; i <= lname; i++)
+	for (i = 0; i <= _leght(name); i++)
 		dog->name[i] = name[i];
 
 	dog->age = age;
@@ -51,7 +51,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/*recorre y asigna a la structura dog.owner*/
-	for (i = 0; i <= lowner; i++)
+	for (i = 0; i <= dog->owner != '\0' i++)
 		dog->owner[i] = owner[i];
 
 	return (0);
