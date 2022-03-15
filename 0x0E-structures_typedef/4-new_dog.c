@@ -26,24 +26,26 @@ int _lenght(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	int i;
+	int i len;
 
 	dog = (dog_t *)malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
+	len = _lenght(name);
 
-	dog->name = malloc(sizeof(char) * (_lenght(name) + 1));
+	dog->name = malloc(sizeof(char) * (len + 1));
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 
-	for (i = 0; name[i] != '\0'; i++)
+	for (i = 0; i < len; i++)
 		dog->name[i] = name[i];
 
 	dog->age = age;
-	dog->owner = malloc(sizeof(char) * (_lenght(owner) + 1));
+	len = _lenght(owner);
+	dog->owner = malloc(sizeof(char) * (len + 1));
 	if (owner->owner == NULL)
 	{
 		free(dog->name);
@@ -51,7 +53,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/*recorre y asigna a la structura dog.owner*/
-	for (i = 0; owner[i] != '\0' i++)
+	for (i = 0; owner[i] != '\0'; i++)
 		dog->owner[i] = owner[i];
 
 	return (dog);
