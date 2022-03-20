@@ -65,7 +65,7 @@ void print_s(va_list arg)
  */
 void print_all(const char * const format, ...)
 {
-    va_list args;
+	va_list args;
 	int i = 0, j = 0;
 	char *s = "";
 	f_print_ funcion[] = {
@@ -74,27 +74,21 @@ void print_all(const char * const format, ...)
 		{"f", print_f},
 		{"s", print_s}
 	};
-
 	va_start(args, format);
 
-    while (format && (*(format + i)))
+	while (format && (*(format + i)))
 	{
 		j = 0;
-
 		while (j < 4 && (*(format + i) != *(funcion[j].type)))
 			j++;
-
 		if (j < 4)
 		{
 			printf("%s", s);
 			funcion[j].f(args);
 			s = ", ";
 		}
-
 		i++;
 	}
-
 	printf("\n");
-
 	va_end(args);
 }
