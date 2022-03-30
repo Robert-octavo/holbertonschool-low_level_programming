@@ -15,9 +15,11 @@ list_t *add_node(list_ **head, const char *str)
 
 	if (strdup(str) == NULL)
 		return (NULL);
+
 	nueva = malloc(sizeof(list_t));
 	if (nueva == NULL)
 		return (NULL);
+
 	nueva->str = strup(str);/*duplica la cadena*/
 	nueva->len = strlen(str);/*Largo de la cadena*/
 
@@ -27,5 +29,6 @@ list_t *add_node(list_ **head, const char *str)
 		nueva->next = *head;
 
 	*head = nueva;
+
 	return (nueva);
 }
