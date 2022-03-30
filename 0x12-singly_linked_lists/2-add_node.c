@@ -7,29 +7,24 @@
  */
 list_t *add_node(list_ **head, const char *str)
 {
-	int lenght;
 	list_t *nueva;
-	char *con;
 
-	if (str == NULL || head == NULL)
+	if (str == NULL)
 		return (NULL);
-	for (lenght = 0, str[lenght], lenght++)
-		;
-	nueva = *head;
-	con = malloc((lenght + 1) * sizeof(char));
-	if (con == NULL)
+
+	if (strdup(str) == NULL)
 		return (NULL);
-	for (i = 0; str[i]; i++)
-		con[i] = str[i];
 	nueva = malloc(sizeof(list_t));
 	if (nueva == NULL)
-	{
-		free(con);
 		return (NULL);
-	}
-	nueva->str = con;
-	nueva->len = lenght;
-	nueva->next = *head;
+	nueva->str = strup(str);/*duplica la cadena*/
+	nueva->len = strlen(str);/*Largo de la cadena*/
+
+	if (head == NULL)
+		nueva->next = NULL;
+	else
+		nueva->next = *head;
+
 	*head = nueva;
 	return (nueva);
 }
