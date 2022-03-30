@@ -7,6 +7,15 @@
 #include <stddef.h>
 #include <string.h>
 
+/**
+ * struct list_s - singly linked list
+ * @str: string
+ * @len: length
+ * * @next: points to the next node
+ *
+ * Description: singly linked list
+ */
+
 typedef struct list_s
 {
 	char *str;
