@@ -20,7 +20,7 @@ list_t *add_node(list_ **head, const char *str)
 	if (nueva == NULL)
 		return (NULL);
 
-	nueva->str = strup(str);/*duplica la cadena*/
+	nueva->str = strdup(str);/*duplica la cadena*/
 	nueva->len = strlen(str);/*Largo de la cadena*/
 
 	if (head == NULL)
