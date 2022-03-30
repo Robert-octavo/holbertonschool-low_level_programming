@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 /**
  * add_node - function that adds a node
  * @head: pointer to linkend list
