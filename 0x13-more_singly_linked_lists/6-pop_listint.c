@@ -14,10 +14,6 @@ int pop_listint(listint_t **head)
 	if (*head == NULL)
 		return (0);
 
-	new = malloc(sizeof(listint_t));/*Reserve Memory*/
-	if (new == NULL)/*Check if the Memory were allocated*/
-		return (NULL);
-
 	new = *head;
 	*head = (*head)->next;
 
