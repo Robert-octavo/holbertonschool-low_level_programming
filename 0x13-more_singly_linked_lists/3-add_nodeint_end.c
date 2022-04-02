@@ -9,7 +9,7 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *new;
+	listint_t *new, *ultimo;
 
 	new = malloc(sizeof(listint_t));/*Reserve Memory*/
 	if (new == NULL)/*Check if the Memory were allocated*/
