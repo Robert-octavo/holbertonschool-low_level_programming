@@ -3,7 +3,7 @@
 /**
  * free_listint- frees a list
  * @head: head of the linked list.
- * Return: no return. 
+ * Return: no return.
  */
 
 void free_listint(listint_t *head)
@@ -14,6 +14,6 @@ void free_listint(listint_t *head)
 	{
 		C = head->next;
 		free(head);
-		head =  c;
+		head = c;
 	}
 }
