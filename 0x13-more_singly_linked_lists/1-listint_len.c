@@ -5,9 +5,9 @@
  * @h: singly linked list
  * Return: number of nodes in the linked list
  */
-size_t listint_len(const list_t *h)
+size_t listint_len(const listint_t *h)
 {
-	size_t i = 0; /*counts the nodes on the list*/
+	size_t i = 0;/*counts the nodes on the list*/
 
 	while (h != NULL)
 	{
