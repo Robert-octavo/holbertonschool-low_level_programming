@@ -7,7 +7,7 @@
  * Return: address of the head or Null if it failed.
  */
 
-listint_t *add_nodeint(list_t **head, const int n)
+listint_t *add_nodeint(listnt_t **head, const int n)
 {
 	list_t *new;
 	new = malloc(sizeof(list_t));/*Reserve Memory*/
