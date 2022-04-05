@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * binary_to_uint - Function that converts a binary
