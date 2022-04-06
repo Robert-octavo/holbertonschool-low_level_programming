@@ -18,14 +18,12 @@ unsigned int binary_to_uint(const char *b)
 	if (b == '\0')
 		return (0);
 
-	for (len = 0; b[len] != '\0'; len ++)
-	{
-		if (b[len] != '0' && b[len] != '1')
-			return (0);
-	}
+	for (len = 0; b[len] != '\0'; len ++);
 
 	for (len = len - 1; len >=0; len--)
 	{
+		if (b[len] != '0' && b[len] != '1')
+                        return (0);
 		num = num + (b[len] - '0') * mul;
 		mul = mul * 2;
 	}
