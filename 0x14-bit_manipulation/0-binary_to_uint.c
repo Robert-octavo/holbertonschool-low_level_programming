@@ -25,7 +25,9 @@ unsigned int binary_to_uint(const char *b)
 		if (b[len] != '0' && b[len] != '1')
                         return (0);
 
-		num = num + (b[len] - '0') * mul;
+		if (b[len] == '1')/*add if its find a 1*/
+			n = n + mul;
+
 		mul = mul * 2;
 	}
 	return (n);
