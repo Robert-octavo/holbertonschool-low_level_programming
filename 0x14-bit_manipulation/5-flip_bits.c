@@ -11,11 +11,11 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int xor = n ^ m;/*Check how many bit we need to change*/
-	unsigned resul = 0;
+	unsigned int resul = 0;
 
 	while (xor > 0)
 	{
-		resul = resul + (xor & 1);/*check with & operator if both are 1 add 1 to result*/
+		resul = resul + (xor & 1);/*check with & operator if both are 1 add 1*/
 		xor = xor >> 1;/*move xor 1 position to check in the next iteration*/
 	}
 
