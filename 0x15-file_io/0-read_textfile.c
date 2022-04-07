@@ -17,7 +17,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	text = malloc(sizeof(char) * letters);
 	if (text == NULL)
 		return (0);
-	
+
 	filed = open(filename, O_RDONLY);/*Open the file with the flag Read Only*/
 	if (filed == -1)/*Check if return an error*/
 		return (0);
