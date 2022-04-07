@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	filed = open(filename, O_RDONLY);/*Open the file with the flag Read Only*/
 	if (filed == -1)
 	{
-		clore(filed);
+		close(filed);
 		return (0);
 	}
 	vread = read(filed, text, letters);
