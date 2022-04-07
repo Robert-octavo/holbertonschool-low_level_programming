@@ -8,7 +8,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int filed; 
+	int filed;
 	ssize_t vwrite, vread;
 	char *text;
 
@@ -28,8 +28,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	vwrite = write(1, text, vread);
 	if (vwrite == -1)/*check if return an error*/
 		return (0);
-	free(text);
+
 	close(filed);
+	free(text);
 
 	return (vwrite);
 }
