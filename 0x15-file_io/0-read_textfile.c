@@ -15,18 +15,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	text = malloc(sizeof(char) * letters);
+	text = malloc(sizeof(char) * (letters));
 	if (text == NULL)
 		return (0);
 
 	filed = open(filename, O_RDONLY);/*Open the file with the flag Read Only*/
-	if (filed == -1)/*Check if return an error*/
+	if (filed == -1)
+	{
+		clore(filed);
 		return (0);
+	}
 	vread = read(filed, text, letters);
 	if (vread == -1)/*check if return an error*/
 		return (0);
 	vwrite = write(1, text, vread);
-	if (vwrite == -1)/*check if return an error*/
+	if (vwrite == -1 || vwrite != vread)/*check if return an error*/
 		return (0);
 
 	close(filed);
