@@ -28,7 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	vread = read(filed, text, letters);
 	if (vread == -1)/*check if return an error*/
 		return (0);
-	vwrite = write(1, text, vread);
+	vwrite = write(STDOUT_FILENO, text, vread);
 	if (vwrite == -1 || vwrite != vread)/*check if return an error*/
 		return (0);
 
