@@ -13,7 +13,7 @@ ssize_t read_textfile(cons char *filename, size_t letters)
 
 	text = malloc(sizeof(char) * letters);
 	
-	filed = open(filename, 0_RDONLY);/*Open the file with the flag Read Only*/
+	filed = open(filename, O_RDONLY);/*Open the file with the flag Read Only*/
 	if (filed == -1)/*Check if return an error*/
 		return (0);
 	vread = read(filed, text, letters);
@@ -24,6 +24,5 @@ ssize_t read_textfile(cons char *filename, size_t letters)
 		return (0);
 	free(text);
 
-
-	return (n);
+	return (vwrite);
 }
