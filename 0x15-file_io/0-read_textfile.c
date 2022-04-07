@@ -28,6 +28,7 @@ ssize_t read_textfile(cons char *filename, size_t letters)
 	if (vwrite == -1)/*check if return an error*/
 		return (0);
 	free(text);
+	close(filed);
 
 	return (vwrite);
 }
