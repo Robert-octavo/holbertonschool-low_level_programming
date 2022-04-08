@@ -6,7 +6,7 @@
  * @text_content: content
  * Return: 1 on success -1 on faiulure
  */
-int apend_text_to_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int openf, writef, largo = 0;
 
