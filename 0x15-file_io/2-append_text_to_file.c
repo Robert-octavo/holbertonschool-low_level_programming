@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 /**
- * apend_text_to_file - Function that create a file
+ * append_text_to_file - Function that create a file
  * @filename: Pointer
  * @text_content: content
  * Return: 1 on success -1 on faiulure
