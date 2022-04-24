@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 {
 	int filefrom, fileto, readfile;
 	char *buf;
+
 	if (arg != 3)
 	{
 		/*Print a file descriptor*/
@@ -25,11 +26,11 @@ int main(int argc, char *argv[])
 	do {
 		if (filefrom == -1 || readfile == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: Can't read from file $s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file $s\n", argv[1]);
 			exit(98);
 		}
 	} while (readfile > 0);
-	free (buf);
+	free(buf);
 	c_file(filefrom);
 	c_file(fileto);
 	return (0);
