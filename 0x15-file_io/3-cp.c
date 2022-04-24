@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int filefrom, fileto, readfile;
+	int filefrom, fileto, readfile, writefile;
 	char *buf;
 
 	if (arg != 3)
@@ -29,7 +29,20 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't read from file $s\n", argv[1]);
 			exit(98);
 		}
+
+		writefile = write(fileto, buf, readfile);
+		if (fileto == -1 || writefile == -1)
+		{
+			dprintf(STEDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			free(buffer);
+			exit(99);
+		}
+
+		readfile = read(filefrom, buf, 1024);
+		fileto = open(argv[2], O_WRONLY | O_APPEND);
+
 	} while (readfile > 0);
+
 	free(buf);
 	c_file(filefrom);
 	c_file(fileto);
