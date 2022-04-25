@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	int filefrom, fileto, readfile, writefile;
 	char *buf;
 
-	if (arg != 3)
+	if (argc != 3)
 	{
 		/*Print a file descriptor*/
 		dprintf(STDERR_FILENO, "Usage: cp file_from_file_to\n");
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	}
 	buf = buffer(argv[2]);
-	filefrom = open(argv[1], 0_RDONLY);
+	filefrom = open(argv[1], O_RDONLY);
 	fileto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	readfile = read(filefrom, buf, 1024);
 
@@ -33,8 +33,8 @@ int main(int argc, char *argv[])
 		writefile = write(fileto, buf, readfile);
 		if (fileto == -1 || writefile == -1)
 		{
-			dprintf(STEDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			free(buffer);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			free(buf);
 			exit(99);
 		}
 
