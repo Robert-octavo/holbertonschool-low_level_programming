@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	do {
 		if (filefrom == -1 || readfile == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file $s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 
