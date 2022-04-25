@@ -45,7 +45,7 @@ char *buffer(char *buffer)
 	buf = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to $s\n", buffer);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", buffer);
 		exit(99);
 	}
 	return (buf);
