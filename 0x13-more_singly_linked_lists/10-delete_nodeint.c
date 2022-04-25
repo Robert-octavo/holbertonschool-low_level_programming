@@ -15,6 +15,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (copia == NULL)
 			return (-1);
+
 	if (index == 0)
 	{
 		/*(*head) notacion por ser doble puntero*/
@@ -31,5 +32,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	new = copia->next;
 	copia->next = new->next;
+	free(new);
 	return (1);
 }
