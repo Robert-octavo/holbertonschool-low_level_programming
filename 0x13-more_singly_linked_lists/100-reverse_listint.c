@@ -7,29 +7,14 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *new;
-	listint_t *copia = *head;
-	unsigned int i;
-
-	if (copia == NULL)
-		return (-1);
-
-	if (index == 0)
+	listint_t *before;
+	listint_t *after;
+	while(*head != NULL)
 	{
-		/*(*head) notacion por ser doble puntero*/
-		*head = (*head)->next;
-		free(copia);
-		return (1);
+		after = (*head)->next;
+		(*head)->next = before;
+		before = *head;
 	}
-
-	for (i = 0; i < (index - 1); i++)
-	{
-		if (copia->next == NULL)
-			return (-1);
-		copia = copia->next;
-	}
-	new = copia->next;
-	copia->next = new->next;
-	free(new);
-	return (1);
+	*head = before;	
+	return (*head);
 }
