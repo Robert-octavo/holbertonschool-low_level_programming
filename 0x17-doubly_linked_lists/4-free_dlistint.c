@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * free_dlistint - function that frees a dlistint_t list.
- * @h: pointer to the head.
+ * @head: pointer to the head.
  * Return: number of elements
  */
 
@@ -15,5 +15,5 @@ void free_dlistint(dlistint_t *head)
 		free(head);
 		head = tmp;
 	}
-	
+
 }
