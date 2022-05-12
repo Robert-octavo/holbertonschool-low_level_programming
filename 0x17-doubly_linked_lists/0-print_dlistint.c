@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_dlistint - prints all the elements of a doubel 
+ * print_dlistint - prints all the elements of a double
  * linked list.
  * @h: pointer to the head.
  * Return: number of elements
