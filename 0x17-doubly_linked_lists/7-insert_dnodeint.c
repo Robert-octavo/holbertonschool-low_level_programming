@@ -12,8 +12,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new, *tmp = *h;
 /*add at the beginning idx = 0*/
-	if(idx == 0)
-		return (add_dnodeint(h,n));
+	if (idx == 0)
+		return (add_dnodeint(h, n));
 /*Go to the index position with tmp*/
 	while (idx != 1)
 	{
@@ -21,7 +21,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		idx--;
 	}
 /*Check if tmp is the las one*/
-	if(tmp->next == NULL)
+	if (tmp->next == NULL)
 		return (add_dnodeint_end(h, n));
 
 /*if is diferent from the beginnig or last */
