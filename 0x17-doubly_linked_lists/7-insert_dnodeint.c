@@ -14,13 +14,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 /*add at the beginning idx = 0*/
 	if (idx == 0)
 		return (add_dnodeint(h, n));
-/*Check if tmp is NULL*/
-		if (tmp == NULL)
-			return (NULL);
+
 /*Go to the index position with tmp*/
 	while (idx != 1)
 	{
 		tmp = tmp->next;
+/*Check if tmp is NULL*/
+		if (tmp == NULL)
+			return (NULL);
 		idx--;
 	}
 /*Check if tmp is the las one*/
