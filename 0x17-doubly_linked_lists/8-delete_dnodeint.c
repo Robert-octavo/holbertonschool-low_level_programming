@@ -3,7 +3,7 @@
  * delete_dnodeint_at_index - Write a function that deletes
  * the node at index index of a dlistint_t linked list.
  * @head: head of the linked list.
- * @idx: Index
+ * @index: Index
  * Return: 1 if it succeeded, -1 if it failed
  */
 
@@ -27,7 +27,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (tmp != *head)
 	{
 		(tmp->prev)->next = tmp->next;
-		if(tmp->next != NULL)
+		if (tmp->next != NULL)
 			(tmp->next)->prev = tmp->prev;
 	}
 	else
