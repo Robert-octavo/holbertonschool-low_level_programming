@@ -46,5 +46,6 @@ void print_square(int size);
 void print_triangle(int size);
 void print_number(int n);
 void set_string(char **s, char *to);
+int wildcmp(char *s1, char *s2);
 
 #endif
