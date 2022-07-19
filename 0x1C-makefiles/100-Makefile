@@ -1,4 +1,6 @@
 #make -f 100-Makefile
+#https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html
+# test with PHONY Built-in Target Name
 
 CC = gcc
 SRC = main.c school.c
@@ -6,6 +8,8 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
+
+.PHONY: all clean fclean oclean re
 
 all : m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
