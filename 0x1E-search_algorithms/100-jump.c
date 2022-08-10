@@ -38,7 +38,7 @@ int jump_search(int *array, size_t size, int value)
 	/*Finding the block*/
 	for (; jump < size && array[jump] < value; jump += step)
 	{
-		printf("Value checkd array[%ld] = [%d]\n", jump, array[jump]);
+		printf("Value checked array[%ld] = [%d]\n", jump, array[jump]);
 		i = jump;
 	}
 
